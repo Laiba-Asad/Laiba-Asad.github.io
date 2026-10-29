@@ -31,7 +31,6 @@ Empty URLs (`''`) render as dashed "link pending" placeholders rather than broke
 | Mark CTF platform complete | change `projects[3].status` from `In progress` |
 | Credential verification links | `certifications[].verifyUrl` |
 | Badge images | put files in `public/badges/`, set `certifications[].image` to `/badges/name.png` |
-| Initiative status | `initiatives[].state`: `completed`, `ongoing` or `planned` |
 | Project folder stamp | `projects[].status`, e.g. `On file`, `Active`, `In progress` |
 
 ## Structure

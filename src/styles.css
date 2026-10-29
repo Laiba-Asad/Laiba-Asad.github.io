@@ -1528,29 +1528,6 @@ a.cert-verify:hover {
   font-size: var(--text-sm);
 }
 
-.state {
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: var(--text-2xs);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.state-completed {
-  background: var(--ink);
-  color: var(--cream);
-}
-
-.state-ongoing {
-  background: var(--blue);
-}
-
-.state-planned {
-  border-style: dashed;
-}
-
 /* Contact */
 .contact-grid {
   display: grid;

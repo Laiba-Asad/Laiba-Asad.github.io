@@ -10,7 +10,7 @@
 export const profile = {
   name: 'Laiba Asad',
   initials: 'LA',
-  role: 'Cyber Security Engineer',
+  role: 'Security Analyst',
   location: 'Islamabad, Pakistan',
   principle: 'I trust evidence, not assumptions.',
 
@@ -30,7 +30,7 @@ export const navLinks = [
 
 export const about = {
   paragraphs: [
-    'Computer science taught me how systems are built. Security taught me to ask how they behave when someone leans on them. That foundation — how operating systems, networks, and applications actually fit together — is what I reach for when an alert does not make sense yet.',
+    'Computer science taught me how systems are built. Security taught me to ask how they behave when someone leans on them. That foundation of how operating systems, networks, and applications actually fit together is what I reach for when an alert does not make sense yet.',
     'My work sits on both sides of the line. On the defensive side: monitoring, triage, log analysis, and tuning detections so the alerts that reach a person are worth reading. On the testing side: probing web applications and networks the way an attacker would, then writing findings up so someone can actually fix them.',
     'I am more interested in what the logs say than in what everyone assumes happened. I keep a home lab, I keep learning, and I keep asking one more question before I close a case.',
   ],
@@ -92,10 +92,10 @@ export const skillGroups = [
 
 export const experience = [
   {
-    role: 'Cyber Security Engineer',
+    role: 'Security Analyst',
     company: 'Cydemic',
     location: 'Islamabad, Pakistan',
-    period: 'October 2024 — Present',
+    period: 'October 2024 - Present',
     current: true,
     summary:
       'Working across the defensive and testing sides of security — from watching telemetry and investigating alerts to testing applications and automating the repetitive parts.',
@@ -123,7 +123,7 @@ export const projects = [
     name: 'CheckIPReputation',
     icon: 'fingerprint',
     description:
-      'A utility for checking the reputation of an IP address and pulling threat-intelligence context into one place — useful when triaging an alert that points at an unfamiliar source.',
+      'A utility for checking the reputation of an IP address and pulling threat-intelligence context into one place, useful when triaging an alert that points at an unfamiliar source.',
     tags: ['Threat intelligence', 'IP reputation', 'Alert triage'],
     repoUrl: 'https://github.com/Laiba-Asad/CheckIPReputation',
     demoUrl: '',
@@ -153,7 +153,7 @@ export const projects = [
     name: 'CTF Platform',
     icon: 'flag',
     description:
-      'A Capture the Flag platform built for an upcoming cybersecurity event.',
+      'A Capture the Flag platform built for a cybersecurity event.',
     tags: ['CTF', 'Event platform', 'Challenge design'],
     repoUrl: '', // No public repository: the card shows no link row.
     demoUrl: '',
@@ -213,32 +213,26 @@ export const certifications = [
 
 /*
  * Initiatives
- *  - state: 'completed' | 'ongoing' | 'planned'
- *    Only mark something 'completed' once it has actually happened.
  */
 export const initiatives = [
   {
-    title: 'Cybersecurity awareness',
+    title: 'Cybersecurity awareness and social media campaigns',
     icon: 'megaphone',
-    state: 'ongoing',
-    text: 'Supporting internal awareness activities that make safer habits part of everyday work rather than a once-a-year slideshow.',
+    text: 'Created and ran campaigns to raise awareness of cybersecurity topics, including phishing, social engineering, and password hygiene.',
   },
   {
-    title: 'CTF planning',
+    title: 'CTF Event',
     icon: 'flag',
-    state: 'planned',
-    text: 'Planning a Capture the Flag event. The platform behind it is built; the event has not taken place yet.',
+    text: 'Conducted a Capture the Flag event. Built the platform, designed the challenges, and ran the event for participants with a range of skill levels.',
   },
   {
     title: 'Technical documentation',
     icon: 'file',
-    state: 'ongoing',
     text: 'Writing reports, runbooks, and remediation guidance that a reader can act on without a follow-up meeting.',
   },
   {
     title: 'Security automation',
     icon: 'workflow',
-    state: 'ongoing',
     text: 'Turning repetitive lookups and reporting steps into small Python utilities, so investigation time goes to investigating.',
   },
 ];

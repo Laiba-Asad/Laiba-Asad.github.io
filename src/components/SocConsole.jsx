@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 // prefers-reduced-motion.
 
 const SCRIPT = [
-  { cmd: 'whoami', out: 'laiba asad — cyber security engineer' },
+  { cmd: 'whoami', out: 'laiba asad — Security Analyst' },
   { cmd: 'cat focus.txt', out: 'blue team · soc · incident response · security testing' },
   { cmd: 'pwd', out: '/islamabad/pakistan' },
 ];

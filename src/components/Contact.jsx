@@ -43,9 +43,7 @@ export default function Contact() {
             Have a problem worth <em>investigating</em>?
           </h2>
           <p className="section-lede">
-            I’m open to conversations with recruiters, security teams, and collaborators,
-            whether that’s a role, a project, or comparing notes on a detection that
-            wouldn’t behave.
+           Let's connect and discuss how I can help you with your security needs. Whether it's monitoring, incident response, or testing your systems, I'm here to provide evidence-based solutions.
           </p>
         </div>
 
