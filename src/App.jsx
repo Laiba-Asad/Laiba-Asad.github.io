@@ -23,8 +23,12 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects />
-        <Education />
-        <Certifications />
+        <div className="section section-alt">
+          <div className="container credentials-grid">
+            <Education />
+            <Certifications />
+          </div>
+        </div>
         <Initiatives />
         <Contact />
       </main>

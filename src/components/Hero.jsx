@@ -3,6 +3,7 @@ import { profile } from '../data/content.js';
 import CaseFile from './CaseFile.jsx';
 import { GitHubIcon, LinkedInIcon } from './icons.jsx';
 import SmartLink from './SmartLink.jsx';
+import SocConsole from './SocConsole.jsx';
 
 export default function Hero() {
   return (
@@ -54,7 +55,14 @@ export default function Hero() {
           </p>
         </div>
 
-        <CaseFile />
+        <div className="hero-visual">
+          <div className="hero-stripes" aria-hidden="true" />
+          <CaseFile />
+        </div>
+      </div>
+
+      <div className="container">
+        <SocConsole />
       </div>
     </section>
   );

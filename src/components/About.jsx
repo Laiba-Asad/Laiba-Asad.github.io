@@ -35,26 +35,6 @@ export default function About() {
           </dl>
         </div>
       </div>
-
-      <figure className="statement-band">
-        <blockquote className="container">
-          <p>
-            I trust <em>evidence</em>, not assumptions.
-          </p>
-        </blockquote>
-      </figure>
-
-      <div className="container">
-        <ul className="principles">
-          {about.principles.map((item, i) => (
-            <li key={item.title}>
-              <span className="mono-index">0{i + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }

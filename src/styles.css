@@ -54,7 +54,7 @@
   --space-6: 2rem;
   --space-7: 3rem;
   --space-8: 4rem;
-  --space-section: clamp(4.5rem, 3rem + 6vw, 8rem);
+  --space-section: clamp(3.25rem, 2rem + 3.75vw, 5rem);
 
   /* Layout */
   --container: 1160px;
@@ -229,7 +229,7 @@ main:focus {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
   color: var(--ink-muted);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
@@ -249,7 +249,7 @@ main:focus {
 
 .section-header {
   max-width: 680px;
-  margin-bottom: var(--space-7);
+  margin-bottom: var(--space-6);
 }
 
 .section-header h2,
@@ -264,11 +264,16 @@ main:focus {
   line-height: 1.6;
 }
 
-.mono-index {
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.08em;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .button {
@@ -508,7 +513,7 @@ main:focus {
    Hero
    ========================================================================== */
 .hero {
-  padding-block: clamp(3rem, 2rem + 5vw, 6.5rem) clamp(4rem, 3rem + 5vw, 7rem);
+  padding-block: clamp(2.5rem, 1.75rem + 3.5vw, 4.5rem) clamp(2.75rem, 2rem + 3vw, 4.5rem);
   overflow: hidden;
 }
 
@@ -577,11 +582,31 @@ main:focus {
   text-transform: uppercase;
 }
 
+/* Right-hand visual: case file on a striped Plum Violet panel */
+.hero-visual {
+  position: relative;
+  isolation: isolate;
+  justify-self: end;
+  width: 100%;
+  max-width: 440px;
+}
+
+.hero-stripes {
+  position: absolute;
+  inset: -2rem -1.75rem -2rem 2.5rem;
+  z-index: -1;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--blue) 0 22px,
+    var(--blue-soft) 22px 44px
+  );
+}
+
 /* Case file illustration */
 .case-file {
   position: relative;
-  max-width: 440px;
-  justify-self: end;
   width: 100%;
   transform: rotate(2deg);
 }
@@ -713,6 +738,205 @@ main:focus {
   transform: rotate(-12deg);
 }
 
+/* SOC console (decorative, simulated) */
+.soc {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-top: clamp(3rem, 2rem + 3vw, 4.5rem);
+}
+
+.terminal {
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  /* A shade darker than Grape Violet */
+  background: #2c1240;
+}
+
+.terminal-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.terminal-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.terminal-dots span:nth-child(2) {
+  background: var(--blush);
+}
+
+.terminal-dots span:nth-child(3) {
+  background: var(--cream);
+}
+
+.terminal-title {
+  color: var(--dark-muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+}
+
+.terminal-body {
+  display: grid;
+  padding: var(--space-5);
+  line-height: 1.7;
+}
+
+.terminal-ghost,
+.terminal-live {
+  grid-area: 1 / 1;
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+}
+
+.terminal-ghost {
+  visibility: hidden;
+}
+
+.terminal-body p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.terminal-prompt {
+  color: var(--blue);
+}
+
+.terminal-cmd {
+  color: var(--cream);
+}
+
+.terminal-out {
+  color: var(--blush);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.1em;
+  margin-left: 1px;
+  background: var(--cream);
+  vertical-align: text-bottom;
+}
+
+.soc-card {
+  padding: var(--space-5);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.soc-card-head {
+  margin-bottom: var(--space-4);
+}
+
+.soc-card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+}
+
+.soc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.soc-card-note {
+  margin-top: var(--space-1);
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.soc-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: var(--border);
+}
+
+.soc-metrics div {
+  padding: var(--space-3) 0;
+  border-bottom: var(--border);
+}
+
+.soc-metrics div:nth-child(even) {
+  padding-left: var(--space-4);
+  border-left: var(--border);
+}
+
+.soc-metrics dt {
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.soc-metrics dd {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.soc-threats {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.soc-threats li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.soc-pill {
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.soc-pill-type {
+  background: var(--blue);
+}
+
+.soc-pill-status {
+  background: var(--blush);
+}
+
+.soc-arrow {
+  color: var(--ink-muted);
+}
+
 /* ==========================================================================
    Ticker band
    ========================================================================== */
@@ -758,10 +982,6 @@ main:focus {
 
 .section-alt {
   background: var(--cream-2);
-}
-
-.section-tight {
-  padding-block: calc(var(--space-section) * 0.75);
 }
 
 .section-dark {
@@ -818,60 +1038,6 @@ main:focus {
 }
 
 .about-facts dd {
-  font-size: var(--text-sm);
-}
-
-/* The one powder-blue striped band */
-.statement-band {
-  margin-block: var(--space-8);
-  padding-block: clamp(3rem, 2rem + 4vw, 5.5rem);
-  border-block: 1px solid var(--ink);
-  background: repeating-linear-gradient(
-    90deg,
-    var(--blue) 0 22px,
-    var(--blue-soft) 22px 44px
-  );
-}
-
-.statement-band blockquote {
-  display: flex;
-  justify-content: center;
-}
-
-.statement-band p {
-  max-width: 900px;
-  padding: var(--space-5) clamp(1.25rem, 4vw, 3rem);
-  border: 1px solid var(--ink);
-  background: var(--cream);
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 1.3rem + 3vw, 3.75rem);
-  line-height: 1.08;
-  text-align: center;
-  text-wrap: balance;
-}
-
-.statement-band em {
-  color: var(--rose);
-}
-
-.principles {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-6);
-}
-
-.principles li {
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--ink);
-}
-
-.principles h3 {
-  margin: var(--space-3) 0 var(--space-2);
-  font-size: var(--text-md);
-}
-
-.principles p {
-  color: var(--ink-muted);
   font-size: var(--text-sm);
 }
 
@@ -1014,7 +1180,7 @@ main:focus {
 .folders-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-7) var(--space-5);
+  gap: var(--space-6) var(--space-5);
 }
 
 .folder {
@@ -1143,21 +1309,28 @@ a.folder-link:hover {
   letter-spacing: 0.04em;
 }
 
-/* Education */
-.education-grid {
+/* Education + certifications, side by side. Subgrid lines the two
+   headers up so the card and the stamps start at the same height. */
+.credentials-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  align-items: center;
-  gap: var(--space-7);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  grid-template-rows: auto auto;
+  gap: 0 clamp(2rem, 5vw, 4rem);
+  align-items: start;
 }
 
-.education-grid .section-header {
-  margin-bottom: 0;
+.credentials-col {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  align-content: start;
 }
 
+/* Education */
 .education-card {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-self: start;
   align-items: center;
   gap: var(--space-5);
   padding: var(--space-6);
@@ -1174,8 +1347,11 @@ a.folder-link:hover {
 
 .education-meta {
   display: flex;
-  gap: var(--space-6);
-  text-align: right;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: var(--space-4) var(--space-6);
+  padding-top: var(--space-4);
+  border-top: var(--border);
 }
 
 .education-meta dt {
@@ -1196,14 +1372,15 @@ a.folder-link:hover {
 /* Certifications: perforated stamps */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-5);
 }
 
+/* Perforation holes match the section background (cream-2) */
 .cert {
   padding: 12px;
   background:
-    radial-gradient(circle, var(--cream) 3.5px, transparent 4px) 0 0 / 12px 12px round,
+    radial-gradient(circle, var(--cream-2) 3.5px, transparent 4px) 0 0 / 12px 12px round,
     var(--blush);
 }
 
@@ -1548,6 +1725,19 @@ a.contact-row:hover .contact-arrow {
   .folder:hover .folder-body {
     transform: translateY(-3px);
   }
+
+  .terminal-cursor {
+    animation: blink 1s steps(1) infinite;
+  }
+
+  .soc-dot {
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+
+  .soc:not(.is-active) .terminal-cursor,
+  .soc:not(.is-active) .soc-dot {
+    animation-play-state: paused;
+  }
 }
 
 /* Reduced motion: the ticker stays put and only one copy is shown */
@@ -1583,6 +1773,19 @@ a.contact-row:hover .contact-arrow {
   }
 }
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+}
+
 @keyframes ticker {
   to {
     transform: translateX(-50%);
@@ -1593,7 +1796,6 @@ a.contact-row:hover .contact-arrow {
    Responsive
    ========================================================================== */
 @media (max-width: 1080px) {
-  .cert-grid,
   .notes-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1680,22 +1882,28 @@ a.contact-row:hover .contact-arrow {
 
   .hero-grid,
   .about-grid,
-  .contact-grid,
-  .education-grid {
+  .contact-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .case-file {
+  .hero-visual {
     justify-self: start;
+    margin-top: var(--space-4);
+  }
+
+  .case-file {
     transform: rotate(1deg);
   }
 
-  .education-grid {
-    gap: 0;
+  .credentials-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    row-gap: var(--space-7);
   }
 
-  .education-grid .section-header {
-    margin-bottom: var(--space-6);
+  .credentials-col {
+    grid-row: auto;
+    grid-template-rows: none;
   }
 
   .job-head {
@@ -1715,8 +1923,7 @@ a.contact-row:hover .contact-arrow {
 
 @media (max-width: 760px) {
   .skills-grid,
-  .folders-grid,
-  .principles {
+  .folders-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1724,16 +1931,8 @@ a.contact-row:hover .contact-arrow {
     gap: var(--space-6);
   }
 
-  .education-card {
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-
-  .education-meta {
-    grid-column: 1 / -1;
-    justify-content: flex-start;
-    padding-top: var(--space-4);
-    border-top: var(--border);
-    text-align: left;
+  .soc {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .footer-inner {
@@ -1753,6 +1952,10 @@ a.contact-row:hover .contact-arrow {
 
   .case-file {
     transform: rotate(0.5deg);
+  }
+
+  .hero-stripes {
+    inset: -1.25rem -0.75rem -1.5rem 1.5rem;
   }
 
   .case-file::before {
