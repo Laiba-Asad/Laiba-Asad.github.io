@@ -11,6 +11,7 @@ export default function Skills() {
           eyebrow="Skills & tools"
           title={<>A practical <em>toolkit</em>.</>}
           id="skills-title"
+          subtitle="Tools I actually use, not ones I opened once for a screenshot."
         >
           Tools are only as useful as the questions they help answer. These are the ones I use
           to answer them.

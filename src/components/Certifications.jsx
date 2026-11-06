@@ -11,6 +11,7 @@ export default function Certifications() {
         eyebrow="Certifications & achievements"
         title={<>Certifications & <em>achievements</em>.</>}
         id="certifications-title"
+        subtitle="Paperwork that says I know things."
       />
 
       <ul className="cert-grid">

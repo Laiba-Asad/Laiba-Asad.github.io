@@ -1,11 +1,14 @@
 import { ArrowRight, MapPin, Search } from 'lucide-react';
 import { profile } from '../data/content.js';
-import CaseFile from './CaseFile.jsx';
+import { useMediaQuery } from '../hooks.js';
 import { GitHubIcon, LinkedInIcon } from './icons.jsx';
+import PixelLaiba from './PixelLaiba.jsx';
 import SmartLink from './SmartLink.jsx';
 import SocConsole from './SocConsole.jsx';
 
 export default function Hero() {
+  const compact = useMediaQuery('(max-width: 760px)');
+
   return (
     <section id="top" className="hero" aria-labelledby="hero-title">
       <div className="container hero-grid">
@@ -55,9 +58,9 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="hero-visual">
+        <div className="hero-visual hero-visual-pixel">
           <div className="hero-stripes" aria-hidden="true" />
-          <CaseFile />
+          <PixelLaiba size={compact ? 150 : 220} className="hero-pixel" />
         </div>
       </div>
 

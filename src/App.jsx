@@ -1,5 +1,6 @@
 import About from './components/About.jsx';
 import Certifications from './components/Certifications.jsx';
+import Companion from './components/Companion.jsx';
 import Contact from './components/Contact.jsx';
 import Education from './components/Education.jsx';
 import Experience from './components/Experience.jsx';
@@ -8,6 +9,7 @@ import Hero from './components/Hero.jsx';
 import Initiatives from './components/Initiatives.jsx';
 import Navbar from './components/Navbar.jsx';
 import Projects from './components/Projects.jsx';
+import ScanOverlay from './components/ScanOverlay.jsx';
 import Skills from './components/Skills.jsx';
 import Ticker from './components/Ticker.jsx';
 
@@ -33,6 +35,8 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <Companion />
+      <ScanOverlay />
     </>
   );
 }

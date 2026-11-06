@@ -11,6 +11,7 @@ export default function Experience() {
           eyebrow="Experience"
           title={<>On the <em>defensive</em>.</>}
           id="experience-title"
+          subtitle="Where the alerts never sleep. I do, occasionally."
         />
 
         {experience.map((job) => (

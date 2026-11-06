@@ -11,6 +11,7 @@ function CaseFolder({ project, index }) {
   return (
     <article className={`folder${inProgress ? ' is-in-progress' : ''}`}>
       <div className="folder-tab">{caseNumber}</div>
+      <span className="stamp folder-opened" aria-hidden="true">Case opened</span>
       <div className="folder-body">
         <div className="folder-top">
           <span className="icon-box"><Icon name={project.icon} /></span>
@@ -65,6 +66,7 @@ export default function Projects() {
           eyebrow="Projects"
           title={<>Selected <em>cases</em>.</>}
           id="projects-title"
+          subtitle="Things I built because doing it manually twice was once too many."
         >
           Security utilities, a hands-on monitoring lab, and an event platform.
         </SectionHeader>

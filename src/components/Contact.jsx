@@ -42,6 +42,7 @@ export default function Contact() {
           <h2 id="contact-title">
             Have a problem worth <em>investigating</em>?
           </h2>
+          <p className="section-subtitle">I reply faster than most tickets get closed.</p>
           <p className="section-lede">
            Let's connect and discuss how I can help you with your security needs. Whether it's monitoring, incident response, or testing your systems, I'm here to provide evidence-based solutions.
           </p>

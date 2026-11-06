@@ -1,5 +1,6 @@
 import { ArrowUp } from 'lucide-react';
 import { profile } from '../data/content.js';
+import PhishingEgg from './PhishingEgg.jsx';
 
 export default function Footer() {
   return (
@@ -13,6 +14,9 @@ export default function Footer() {
         <a className="back-to-top" href="#top">
           Back to top <ArrowUp size={14} aria-hidden="true" />
         </a>
+      </div>
+      <div className="container footer-extra">
+        <PhishingEgg />
       </div>
     </footer>
   );

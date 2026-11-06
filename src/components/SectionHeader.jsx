@@ -1,4 +1,4 @@
-export default function SectionHeader({ index, eyebrow, title, id, children }) {
+export default function SectionHeader({ index, eyebrow, title, id, subtitle, children }) {
   return (
     <header className="section-header">
       <p className="eyebrow">
@@ -7,6 +7,7 @@ export default function SectionHeader({ index, eyebrow, title, id, children }) {
         {eyebrow}
       </p>
       <h2 id={id}>{title}</h2>
+      {subtitle && <p className="section-subtitle">{subtitle}</p>}
       {children && <p className="section-lede">{children}</p>}
     </header>
   );
